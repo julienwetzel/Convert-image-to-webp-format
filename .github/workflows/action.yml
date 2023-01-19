@@ -1,0 +1,17 @@
+name: Convert-image-to-webp-format
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Doxygen Action
+        uses: mattnotmitt/doxygen-action@1.9.5
+        with:
+          working-directory: '.'
+          doxyfile-path: 'docs/Doxygen'
+          enable-latex: false
+          additional-packages: font-jetbrains-mono-nerd
