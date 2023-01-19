@@ -1,0 +1,57 @@
+body {
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  h1 {
+    margin-top: 0;
+  }
+  input[type=file] {
+    margin: 20px 0;
+  }
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+  }
+  .dropTarget {
+    position: relative;
+    border: 3px dashed silver;
+    flex-basis: auto;
+    flex-grow: 20;
+  }
+  .dropTarget::before {
+    content: 'Drop files here';
+    color: silver;
+    font-size: 5vh;
+    height: 5vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    pointer-events: none;
+    user-select: none;
+  }
+  #previews > div {
+    box-sizing: border-box;
+    height: 240px;
+    width: 240px;
+    padding: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+  }
+  #previews > div > progress {
+    width: 80%;
+  }
+  .layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    height: calc(100vh - 40px);
+  }
